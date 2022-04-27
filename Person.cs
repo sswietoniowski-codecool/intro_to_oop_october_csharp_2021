@@ -3,6 +3,25 @@
     public class Person
     {
         public static int numberOfPeople = 0;
+        private static List<Person> _people = new List<Person>();
+
+        public static Person[] People
+        {
+            get
+            {
+                return _people.ToArray();
+            }
+        }
+
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {lastName}";
+            }
+        }
+
+        public string PhoneNumber { get; set; }
 
         private string _firstName;
 
@@ -45,6 +64,7 @@
             this.age = age;
 
             numberOfPeople++;
+            _people.Add(this);
         }
 
         public string GetFirstName()

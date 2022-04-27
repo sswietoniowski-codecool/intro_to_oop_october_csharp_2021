@@ -52,6 +52,16 @@ public class Program
 
         //Random rnd = new Random();
         //rnd.Next();
+
+        foreach (var p in Person.People)
+        {
+            Console.WriteLine(p);
+        }
+
+        person.PhoneNumber = "123456789";
+        Console.WriteLine(person.PhoneNumber);
+
+        Console.WriteLine(person.FullName);
     }
 
     public static void PrintPersonInfo(string firstName, string lastName, int age)
